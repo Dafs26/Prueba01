@@ -10,22 +10,22 @@ namespace Prueba01
     interface Usuario
     {
         private static string _usuario = "admin";
-        private static string _contraseña = "abc123";
-        private static bool Acceso(string usuario, string contraseña)
+        private static string _password = "abc123";
+        private static bool Acceso(string usuario, string password)
         {
-            return usuario.Equals(_usuario) && contraseña.Equals(_contraseña);
+            return usuario.Equals(_usuario) && password.Equals(_password);
         }
         public static bool InicioSesion()
         {
             string usuario;
-            string contraseña;
+            string password;
             do
             {
                 Console.WriteLine("\nIngrese usuario: ");
                 usuario = (string) Console.ReadLine();
                 Console.WriteLine("\nIngrese contraseña: ");
-                contraseña = (string) Console.ReadLine();
-            } while (!Usuario.Acceso(usuario,contraseña));
+                password = (string) Console.ReadLine();
+            } while (!Usuario.Acceso(usuario,password));
             Console.WriteLine("\nAcceso concedido \n");
             return true;
         }
